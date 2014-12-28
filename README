@@ -1,0 +1,22 @@
+Map was created through next steps:
+1. There was downloaded country from http://www.gadm.org/country
+Rus_adm + UKR_adm
+2. There was installed osgeo
+http://trac.osgeo.org/gdal/wiki/DownloadingGdalBinaries
+apt-get install libgdal-dev
+3. For editing was downloaded http://www.qgis.org/ru/site/ 
+sudo apt-get install qgis python-qgis
+4. The was added, removed shape, generated new shapefiles
+5. There was generated geoJson 
+ogr2ogr -f GeoJSON output.json input.shp
+6. There was installed topojson
+npm install -g topojson
+7. There was generated topojson
+topojson -o current_rus1_topo_mercator.json -p NAME_1,HASC_1,ISO_2 -s 1e-7 -- name=current_russia_mercator.shp
+
+Data of population of Russian Federation
+https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D1%81%D1%83%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BE%D0%B2_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8#.D0.94.D0.B8.D0.BD.D0.B0.D0.BC.D0.B8.D0.BA.D0.B0_.D1.87.D0.B8.D1.81.D0.BB.D0.B5.D0.BD.D0.BD.D0.BE.D1.81.D1.82.D0.B8_.D0.BD.D0.B0.D1.81.D0.B5.D0.BB.D0.B5.D0.BD.D0.B8.D1.8F
+
+Map of the Russian Federation after the change of the Constitution of the Russian Federation on the occasion of the Crimea. The map has a breakdown of federal districts and regions. The map shows population change over the years. Map resized when you change the screen resolution. View in zooming mode and with using different filters. Files for your own edits among qgis located in the archive shapefiles/all_shapefields.tar.gz
+
+Карта Российской Федерации после изменения конституции РФ по случаю присоединения Крыма. Карта имеет разбивку по федеральным округам и регионам. На карте отмечены изменения численности населения за несколько лет. Карта изменяет свой размер при изменении разрешения экрана и доступа для просмотра при помощи зума и различных фильтров по округам и режимам отображения. Файлы для собственных правок в среде qgis расположены в архиве shapefiles/all_shapefields.tar.gz

@@ -1,0 +1,62 @@
+@CHARSET "UTF-8";
+path {
+  stroke:red;
+  stroke-width: 0.5px;
+  cursor: pointer;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+	text-align: center;
+}
+
+.d3-map-container {
+  position: relative;
+  float: left;
+}
+
+.legend {
+  font-size: 12px;
+}
+
+div.tooltip {   
+  position: absolute;           
+  text-align: center;           
+  width: auto;
+  white-space:nowrap;               
+  height: auto;                 
+  padding: 2px;             
+  font-size: 10px;     
+  background: #FFFFFF;
+  border: 2px;      
+  border-radius: 2px;           
+  pointer-events: none; 
+  z-index: 99;
+  font-size: 1.1em;   
+}
+
+.d3-legend-map-container-wrapper {
+	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	padding: 1em;
+}
+
+.select-year {
+	text-align: center;
+}
+
+.select-district {
+	text-align: center;
+}
+
+.select-mode {
+	text-align: center;
+}

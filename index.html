@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="ru" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="ru" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="ru" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"  lang="ru" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
+<html  lang="ru" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+<!--<![endif]-->
+
+<head>
+  <title>The density distribution of the population of the Russian Federation by years (1959,1970,1979,1989,2002,2010,2013,2014). Map with Crimea and Sevastopol. Zoom and filters available.</title>  
+  <meta charset="utf-8" />
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="cleartype" content="on">
+  
+	<style>
+	@import url("./css/map.css");
+	</style>
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="./js/d3.js"></script>
+	<script src="./js/queue.v1.min.js"></script>
+	<script src="./js/topojson.js"></script>
+</head>
+<body class="html" >
+  <h3>The density distribution of the population of the Russian Federation by years (1959,1970,1979,1989,2002,2010,2013,2014). Map with Crimea and Sevastopol. Zoom and filters available.</h2>
+  <div class="section">
+		<div id="d3-map" class="d3-map-container"></div>
+		<div class="d3-legend-map-container-wrapper">
+		  <div>Select mode of displaying</div>
+      <div class="select-mode">
+        <select id="select-mode">
+          <option value="false">Regions</option>
+          <option value="true">District</option>
+        </select>
+      </div>
+      <div>Select district of displaying</div>
+      <div class="select-district">
+        <select id="select-district">
+          <option value="ALL">All</option>
+          <option value="CENTR">Central</option>
+          <option value="KRIM">Crimean</option>
+          <option value="NORDKA">North Caucasian</option>
+          <option value="NORDWE">Northwestern</option>
+          <option value="OST">Far Eastern</option>
+          <option value="PRIVOL">Volga</option>
+          <option value="SIB">Siberian</option>
+          <option value="SOUTH">Southern</option>
+          <option value="URAL">Ural</option>
+        </select>
+      </div>
+		  <div>Select year of counting</div>
+		  <div class="select-year">
+		    <select id="select-year">
+		      <option value="1959">1959</option>
+		      <option value="1970">1970</option>
+		      <option value="1979">1979</option>
+		      <option value="1989">1989</option>
+		      <option value="2002">2002</option>
+		      <option value="2010">2010</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+		    </select>
+		  </div>
+		  <div>Count of people</div>
+		  <div id="d3-legend-map" class="d3-legend-map-container"></div>
+		</div>
+  </div>
+  <script src="./js/run_map.js"></script>
+</body>
+</html>
